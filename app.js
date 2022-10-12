@@ -50,7 +50,6 @@ getAllCountries();
 function addCard (input){
     request.get("https://restcountries.com/v3.1/all")
     .then(countries => {
-        console.log(countries[input]);
         const newCard = document.createElement('div');
         newCard.className = 'card-body';
         const newCardTitle = document.createElement('h5');

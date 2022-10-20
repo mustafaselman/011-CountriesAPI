@@ -60,13 +60,14 @@ function addCard (input){
         newCardImage.alt = countries[input].name.common;
         const newCardPopulation = document.createElement('p');
         newCardPopulation.className = 'card-text';
-        newCardPopulation.innerHTML = "</br><b>POPULATION : </b>" + countries[input].population;
+        
+        newCardPopulation.innerHTML = "</br><i class='bi bi-people-fill'> </i> <b>POPULATION : </b>" + countries[input].population;
         const newCardCurrency = document.createElement('p');
         newCardCurrency.className = 'card-text';
             
         for (let currencyCode in countries[input].currencies) {
             
-            newCardCurrency.innerHTML += `<b>CURRENCIES ${number}: </b>`  + countries[input].currencies[currencyCode].name + "</br>";
+            newCardCurrency.innerHTML += `<i class="bi bi-cash"> </i><b>CURRENCIES ${number}: </b>`  + countries[input].currencies[currencyCode].name + "</br>";
             number++;
         }
         number = 1;

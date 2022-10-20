@@ -12,8 +12,14 @@ function eventListeners(e){
         const myInput = e.target.previousElementSibling.previousElementSibling;
         addCard(myInput.selectedIndex);
         
-    })
-
+    });
+    document.addEventListener('keydown', (event) => {
+        if(event.key == "Enter"){
+            event.preventDefault();
+            addCard(event.target.selectedIndex);
+        }
+        
+      }, false)
 }
 
 
